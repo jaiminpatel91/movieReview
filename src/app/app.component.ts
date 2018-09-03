@@ -17,7 +17,7 @@ export class AppComponent {
     description: '',
     release: '',
     review: []
-  }
+  };
 
 
   constructor(private _MainService: MainService) {
@@ -25,7 +25,6 @@ export class AppComponent {
       .subscribe((res) => {
         this.data = res;
         this.filteredItems = this.data;
-        console.log('data', this.data);
         this.selectDtails(this.filteredItems[0]);
       })
   }
@@ -70,6 +69,7 @@ export class AppComponent {
   }
 
   addReview(add: any) {
+    if (!add) { return; }
     this.details.review.push(add);
   }
 }

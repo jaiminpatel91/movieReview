@@ -29,12 +29,9 @@ li {
 
 .details {
   display: inline-block;
-  width: 40%;
-  padding: 0% 15%;
-}
-
-.moviePoster {
-
+  width: 60%;
+  padding-left: 15%;
+  padding-right: 5%;
 }
 
 .space {
@@ -54,4 +51,44 @@ img {
 .reviewList {
   list-style-type: disc;
   margin-left: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    width: 25%;
+  }
+
+  .list {
+    padding: 0px;
+  }
+
+  .details {
+    padding-left: 5%;
+  }
+
+  select {
+    border: 1px solid black;
+    width: 100%;
+  }
+
+  input {
+    border: 1px solid black;
+  }
+}
+
+@media screen and (min-width: 414px) and (max-width: 736px) {
+  select, input {
+    border: 1px solid black;
+  }
+  .sidebar {
+    width: 100%;
+    margin: 0px 0px;
+  }
+.list {
+  height: 150px;
+}
+.details {
+  width: 100%;
+  padding: 0%;
+}
 }

@@ -1,8 +1,8 @@
 <div class="mainContainer">
-<div class="sidebar">
-  <div>
-    <label>Genre: </label>
-    <select #select (change)="selectFilter(select.value)" style="width: 75%">
+    <div class="sidebar">
+      <div>
+        <label>Genre: </label>
+          <select #select (change)="selectFilter(select.value)" style="width: 75%">
       <option value="">All</option>
       <option value="Action">Action</option>
       <option value="Family">Family</option>
@@ -13,7 +13,7 @@
       <option value="Drama">Drama</option>
       <option value="Thriller">Thriller</option>
     </select>
-  </div>
+      </div>
 
   <div class="space"></div>
 
@@ -34,26 +34,28 @@
 
 
 <div class="details">
-  <div class="moviePoster">
-    <img src="http://{{poster}}" />
-    <div class="space"></div>
-    <div>{{details.name}} ({{details.release}})</div>
-  </div>
+    <div class="moviePoster">
+      <img src="http://{{poster}}" />
+      <div class="space"></div>
+      <div>{{details.name}} ({{details.release}})</div>
+    </div>
 
-  <div class="space"></div>
+    <div class="space"></div>
 
   <div>
-    <div>Description: </div><span>{{details.description}}</span>
-    <div class="space"></div>
-    <div>Actor (s): </div><span *ngFor="let actors of details.actors">
-    <span>{{actors}}, </span>
-  </span>
+      <div>Description: </div><span>{{details.description}}</span>
+        <div class="space"></div>
+        <div>Actor (s): </div><span *ngFor="let actors of details.actors">
+        <span>{{actors}}, </span>
+        </span>
 
     <div class="space"></div>
 
     <div>
-    <input #review type="text" />
-    <button (click)="addReview(review.value); review.value = '';">Add Review</button>
+      <label>
+        <input #review type="text"/>
+      </label>
+      <button (click)="addReview(review.value); review.value = '';">Add Review</button>
 
     <ul>
       <li class="reviewList" *ngFor="let reviews of details.review.reverse()">
