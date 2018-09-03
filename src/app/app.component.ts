@@ -13,6 +13,7 @@ export class AppComponent {
   details = {
     url: '',
     actors: '',
+    director: '',
     name: '',
     description: '',
     release: '',
@@ -60,6 +61,7 @@ export class AppComponent {
     this.details = {
       url: detailData.poster,
       actors: detailData.actors,
+      director: detailData.director,
       name: detailData.title,
       description: detailData.story,
       release: detailData.release,

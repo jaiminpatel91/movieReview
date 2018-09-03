@@ -2,7 +2,7 @@
     <div class="sidebar">
       <div>
         <label>Genre: </label>
-          <select #select (change)="selectFilter(select.value)" style="width: 75%">
+          <select #select (change)="selectFilter(select.value); search.value = ''" style="width: 75%">
       <option value="">All</option>
       <option value="Action">Action</option>
       <option value="Family">Family</option>
@@ -30,7 +30,7 @@
 
   <div class="space"></div>
 
-  <input type="text" #search (input)="textFilter(search.value)" placeholder="Search Movie..." style="width: 100%" />
+  <input type="text" #search (input)="textFilter(search.value); select.value = ''" placeholder="Search Movie..." style="width: 100%" />
 
 </div>
 
@@ -50,6 +50,13 @@
         <div>Actor (s): </div><span *ngFor="let actors of details.actors">
         <span>{{actors}}, </span>
         </span>
+
+    <div *ngIf="details.director">
+      <div class="space"></div>
+      <div>Director (s): </div><span *ngFor="let directors of details.director">
+      <span>{{directors}}, </span>
+    </span>
+    </div>
 
     <div class="space"></div>
 
