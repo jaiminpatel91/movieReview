@@ -1,0 +1,57 @@
+.mainContainer {
+  padding: 50px;
+}
+
+.sidebar {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+}
+
+.list {
+  border: 1px solid black;
+  padding: 0px 5px;
+  height: 400px;
+  overflow: auto;
+  cursor: default;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.details {
+  display: inline-block;
+  width: 40%;
+  padding: 0% 15%;
+}
+
+.moviePoster {
+
+}
+
+.space {
+  height: 20px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.listitem:hover {
+  color: white;
+  background-color: deepskyblue;
+}
+
+.reviewList {
+  list-style-type: disc;
+  margin-left: 20px;
+}
